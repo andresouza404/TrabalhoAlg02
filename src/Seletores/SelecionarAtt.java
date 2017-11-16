@@ -12,7 +12,7 @@ public class SelecionarAtt {
 		for (int x = 0 ; x < a.length ; x++){
 			a[x] = p[rand.nextInt(p.length)];
 		}
-		return null;
+		return a;
 	}
 
 }

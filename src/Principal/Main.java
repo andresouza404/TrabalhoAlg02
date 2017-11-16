@@ -24,7 +24,6 @@ public class Main {
 	public static void main(String[] args) throws FileNotFoundException {
 		System.out.println("Inicializando novo Evento:\n");
 		run();
-
 	}
 
 	private static void run() throws FileNotFoundException {
@@ -113,14 +112,35 @@ public class Main {
 
 	private static void EmitirCertificados() {
 		for (Participante participante : participante) {
-			if (participante.isL1()) {
-				if (participante.isL2()) {
-					if (participante.isL3()) {
-						if (participante.isL4())
-							System.out.println("Concedido Certificado por comparecer a todas as Palestras");
-					}System.out.println("Concedido Certificado por comparecer a tres Palestras");
-				}System.out.println("Concedido Certificado por comparecer a duas Palestras");
-			}System.out.println("Concedid Certificado por comparecer a uma Palestra");
+			if (participante.isL1() && participante.isL2() && participante.isL3() && participante.isL4()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a todas as Palestras");
+			}
+			else if (participante.isL1() && participante.isL2() && participante.isL3()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a tres Palestras");
+			}else if (participante.isL1() && participante.isL2() && participante.isL4()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a tres Palestras");
+			}else if (participante.isL1() && participante.isL3() && participante.isL4()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a tres Palestras");
+			}else if (participante.isL2() && participante.isL3() && participante.isL4()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a tres Palestras");
+			}
+			else if (participante.isL1() && participante.isL2()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a duas Palestras");
+			}else if (participante.isL1() && participante.isL3()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a duas Palestras");
+			}else if (participante.isL1() && participante.isL4()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a duas Palestras");
+			}else if (participante.isL2() && participante.isL3()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a duas Palestras");
+			}else if (participante.isL2() && participante.isL4()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a duas Palestras");
+			}else if (participante.isL3() && participante.isL4()) {
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a duas Palestras");
+			}
+			else if (participante.isL1() || participante.isL2() || participante.isL3() || participante.isL4()){
+				System.out.println(participante.getNome() + " Recebe Certificado por comparecer a uma Palestra");
+			}
+			
 		}
 	}
 }

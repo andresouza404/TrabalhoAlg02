@@ -14,7 +14,7 @@ public class Palestra {
 
 	@Override
 	public String toString() {
-		return "Palestra:" + titulo + "\nResumo: " + resumo;
+		return "Palestra: " + titulo + "\nResumo: " + resumo;
 	}
 	
 	public String getTitulo() {

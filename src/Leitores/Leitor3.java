@@ -4,8 +4,8 @@ import java.io.*;
 import java.util.Scanner;
 
 import Objetos.Palestra;
-import Principal.CriaEvento;
-import Seletores.SelecionaResto;
+import Principal.CriarStrings;
+import Seletores.SelecionarResto;
 
 public class Leitor3 {
 
@@ -17,11 +17,10 @@ public class Leitor3 {
 		int x = 0;
 					
 		while(s.hasNextLine()){
-			a[x] = new Palestra(s.next(), s.next(), SelecionaResto.run(CriaEvento.Sala));
+			a[x] = new Palestra(s.next(), s.next(), SelecionarResto.run(CriarStrings.Sala));
 			x++;
 		}
 		s.close();
-		System.out.println("====================");
 		return a;
 			
 		}

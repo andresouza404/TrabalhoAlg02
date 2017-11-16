@@ -19,7 +19,6 @@ public class Leitor1 {
 	 		x++;
 	 	}
 	 	s.close();
-	 	System.out.println("====================");
 	 	return a;
 	 				
 	 	}
